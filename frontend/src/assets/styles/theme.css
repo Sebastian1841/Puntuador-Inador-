@@ -1,0 +1,40 @@
+﻿/* Palette from combustible7: Sinergy primary, accent and neutral surfaces. */
+:root {
+  --primary: #102372;
+  --brand-accent: #FF6600;
+  --text: #1D292F;
+  --muted: #596870;
+  --border: #E7E7E9;
+  --surface: #FFFFFF;
+  --surface-soft: #F3F3F3;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: var(--text);
+  background: var(--surface-soft);
+}
+.sidebar, .modal, .friends article, .add-friend { background: var(--surface); }
+header { background: var(--surface); }
+h1, h2, .brand, .breadcrumb strong, .collection-heading h2 { color: var(--primary); }
+.brand-icon, .note > span, .hero-score, .rating-input strong { color: var(--accent); }
+.club-logo { background: #edf0fa; color: var(--primary); }
+nav button.active { background: #edf0fa; color: var(--primary); }
+nav button small { background: #1023720d; }
+.note { background: linear-gradient(135deg, #f0f3fc, #fff4ed); }
+.hero { background: linear-gradient(120deg, #edf1fc, #ffffff 68%, #fff1e5); border-color: var(--border); }
+.hero-art { background: radial-gradient(ellipse at 70% 40%, #ff660018, transparent 70%); }
+.hero .pill { background: #fff; color: var(--primary); border-color: #10237222; }
+.hero h2, .art-caption { color: var(--primary); }
+.hero-bottom button { color: #fff; background: var(--primary); }
+.orbit { border-color: #10237220; }
+.art-index { color: var(--primary); }
+.primary { background: var(--primary); color: #fff; }
+.primary:hover { background: #1d368d; }
+.filters button.selected { background: #edf0fa; border-color: #c9d2ee; color: var(--primary); }
+.stars { color: #d9dce2; }
+.stars > span { color: var(--accent); }
+input, select, textarea { background: #fafafa; color: var(--text); border-color: var(--border); }
+.sidebar, header, .club, .stats, .stats > div, footer, .review-box, .opinions article, .modal, .friends article, .add-friend, .search { border-color: var(--border); }
+.empty { background: var(--surface); border-color: #d4d9e2; }
+.empty-icon, .add-friend span { color: var(--primary); }
+.brand small, .club small, .nav-label, nav button, .note p, .settings-nav, .breadcrumb, .header-actions, .eyebrow, .page-heading p, .hero p, .hero-score small, .stats span, .stats small, .filters > span, .card-body p, .card-rating small, .empty p, .friends p, .add-friend small, footer, .muted, .opinions p, .modal label { color: var(--muted); }
+.outline { border-color: #ccd3df; color: var(--primary); }
+.notice { background: #edf1fc; color: var(--primary); }

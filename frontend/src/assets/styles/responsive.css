@@ -1,0 +1,182 @@
+@media(min-width:1500px) {
+  .hero {
+  min-height:340px
+}
+.hero h2 {
+  font-size:44px
+}
+.hero-copy {
+  padding:38px
+}
+.big-star {
+  font-size:310px
+}
+.poster {
+  height:300px
+}
+}
+@media(max-width:1150px) {
+  .sidebar {
+  width:205px;
+  padding:30px 16px
+}
+.brand {
+  font-size:15px
+}
+main {
+  margin-left:205px
+}
+.content {
+  padding:30px 25px
+}
+header {
+  padding:0 25px
+}
+.series-grid,.compact {
+  grid-template-columns:repeat(3,minmax(0,1fr))
+}
+.stats small {
+  display:block;
+  margin:4px 0 0
+}
+.hero h2 {
+  font-size:30px
+}
+.hero-copy {
+  width:66%
+}
+h1 {
+  font-size:27px
+}
+}
+@media(max-width:760px) {
+  .sidebar {
+  position:static;
+  width:auto;
+  padding:18px 20px;
+  display:block
+}
+.brand {
+  font-size:18px
+}
+.brand small,.club,.nav-label,.sidebar-bottom {
+  display:none
+}
+nav {
+  display:flex;
+  margin-top:17px;
+  gap:8px
+}
+nav button {
+  justify-content:center;
+  margin:0;
+  padding:8px;
+  gap:8px
+}
+nav button small {
+  margin-left:0
+}
+main {
+  margin-left:0
+}
+header {
+  height:60px;
+  padding:0 20px
+}
+.shared-label,.live-dot {
+  display:none
+}
+.content {
+  padding:26px 20px
+}
+.page-heading {
+  align-items:flex-start;
+  flex-direction:column;
+  gap:20px
+}
+h1 {
+  font-size:28px
+}
+.eyebrow {
+  font-size:8px
+}
+.hero-copy {
+  width:100%;
+  padding:24px
+}
+.hero h2 {
+  font-size:29px;
+  max-width:310px
+}
+.hero-art {
+  opacity:.17;
+  width:65%
+}
+.hero p {
+  max-width:310px
+}
+.hero-bottom {
+  gap:20px
+}
+.stats {
+  gap:10px
+}
+.stats>div {
+  padding:0 10px
+}
+.stats span {
+  font-size:7px;
+  letter-spacing:1px
+}
+.stats small {
+  font-size:9px
+}
+.collection-heading h2 {
+  font-size:18px
+}
+.search input {
+  width:125px
+}
+.filters>span {
+  display:none
+}
+.filters {
+  gap:5px
+}
+.series-grid,.compact {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px
+}
+.poster {
+  height:235px
+}
+.poster strong {
+  font-size:25px
+}
+.card-rating {
+  flex-wrap:wrap
+}
+.card-rating small {
+  margin-left:0;
+  width:100%
+}
+.friends {
+  grid-template-columns:1fr
+}
+.modal {
+  padding:25px
+}
+.modal h2 {
+  font-size:24px
+}
+footer span {
+  float:none;
+  display:block;
+  margin-top:10px
+}
+}
+@media(prefers-reduced-motion:reduce) {
+  * {
+  transition:none!important
+}
+}

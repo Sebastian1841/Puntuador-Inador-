@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#0b1931">
+    <meta name="description" content="Tu club de series: opiniones entre amigos y rankings de media en media estrella.">
+    <link rel="icon" type="image/png" href="/puntuador-mascots-v3.png">
+    <link rel="apple-touch-icon" href="/puntuador-mascots-v3.png">
+    <script>
+      (() => {
+        let theme = 'dark';
+        try { const saved = localStorage.getItem('puntuador-theme'); if (saved === 'light' || saved === 'dark') theme = saved; } catch {}
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntuador-inador — Tus series, capítulo a capítulo</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

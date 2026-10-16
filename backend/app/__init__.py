@@ -1,0 +1,1 @@
+"""Aftercredits Python API."""

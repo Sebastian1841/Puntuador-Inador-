@@ -1,0 +1,40 @@
+.friends {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px
+}
+.friends article,.add-friend {
+  padding:30px;
+  border:1px solid #26352c22;
+  border-radius:12px;
+  background:#ffffff;
+  text-align:center
+}
+.avatar {
+  width:60px;
+  height:60px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  margin:auto;
+  font-size:20px;
+  color:#182610;
+  font-weight:bold
+}
+.friends h2 {
+  font-size:19px
+}
+.friends p,.add-friend small {
+  color:#637b4e;
+  font-size:12px
+}
+.add-friend span {
+  display:block;
+  font-size:40px;
+  color:var(--accent-ink);
+  margin-bottom:15px
+}
+.add-friend small {
+  display:block;
+  margin-top:10px
+}

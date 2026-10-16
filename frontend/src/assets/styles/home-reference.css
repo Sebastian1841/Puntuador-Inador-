@@ -1,0 +1,103 @@
+/* Reference composition at 1590 × 992. Fluid columns preserve its proportions. */
+@media(min-width:1101px) {
+  .dashboard-sidebar { width:248px; padding:8px 16px 18px; }
+  main { margin-left:248px; }
+  .content { padding:26px 26px 32px 32px; }
+  .dashboard-sidebar .brand-emblem { height:230px; }
+  .dashboard-sidebar .brand-emblem img { max-width:230px; max-height:230px; }
+  .dashboard-sidebar nav button { min-height:46px; padding:11px 15px; font-size:15px; gap:18px; }
+  .sidebar-bottom-actions { margin-top:22px; padding-top:18px; }
+  .sidebar-utility { font-size:15px; min-height:46px; }
+  .home-screen .home-topbar { height:46px; margin-bottom:26px; }
+  .home-screen .home-explore { width:360px; min-height:46px; font-size:15px; }
+  .home-screen .home-user { font-size:15px; }
+  .home-screen .home-user-avatar { width:42px; height:42px; }
+  .home-screen .dashboard-welcome { min-height:140px; margin-bottom:0; padding-top:12px; }
+  .home-screen .dashboard-welcome h1 { font-size:44px; line-height:1.2; margin-bottom:10px; }
+  .home-screen .dashboard-welcome p { font-size:16px; }
+  .home-screen .home-overview { grid-template-columns:2.05fr 1fr 1fr; gap:16px; }
+  .home-screen .home-overview .dashboard-feature { grid-column:auto; min-height:262px; }
+  .home-screen .home-feature-body { padding:16px 12px; gap:24px; }
+  .home-screen .home-feature-poster { width:160px; height:226px; }
+  .home-screen .home-overview .dashboard-feature h2 { font-size:25px; line-height:1.25; margin-bottom:14px; }
+  .home-screen .feature-eyebrow { font-size:11px; margin-bottom:12px; }
+  .home-screen .home-overview .feature-buttons { gap:16px; margin-top:20px; }
+  .home-screen .home-overview .feature-buttons button { padding:14px 16px; font-size:14px; }
+  .home-screen .home-side-panel { padding:16px; min-height:262px; }
+  .home-screen .home-panel-heading h2 { font-size:13px; }
+  .home-screen .home-panel-heading button { font-size:12px; }
+  .home-screen .home-panel-list { max-height:218px; }
+  .home-screen .home-panel-item { min-height:52px; padding:6px 0; }
+  .home-screen .home-panel-item img { width:32px; height:44px; }
+  .home-screen .home-panel-empty { min-height:205px; }
+  .home-screen .dashboard-stats { margin:24px 0 28px; gap:16px; }
+  .home-screen .dashboard-stats>* { min-height:94px; padding:18px; }
+  .home-screen .dashboard-stats small { font-size:13px; }
+  .home-screen .dashboard-stats strong { font-size:30px; }
+  .home-screen .home-shelves { grid-template-columns:3fr 2fr; gap:32px; margin-top:0; }
+  .home-screen .home-shelves .collection-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
+  .home-screen .home-shelves .collection-cover { aspect-ratio:1.1; }
+  .home-screen .collection-card-body { padding:10px 12px; }
+  .home-screen .collection-title { font-size:13px; }
+  .home-screen .collection-card-bottom { margin-top:10px; }
+  .home-screen .collection-card-bottom button { display:none; }
+  .home-screen .shelf-heading { margin-bottom:18px; }
+  .home-screen .shelf-heading h2 { font-size:19px; }
+}
+.recommendation-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.recommendation-card { min-width:0; padding:0; text-align:left; border:0; background:transparent; color:var(--ink); }
+.recommendation-card img,.recommendation-placeholder { width:100%; aspect-ratio:2/3; object-fit:cover; display:block; border-radius:7px; background:var(--panel-soft); }
+.recommendation-card strong { display:block; font-size:13px; margin:8px 0 4px; }
+.recommendation-card small { display:block; font-size:11px; color:var(--quiet); }
+.recommendation-card:focus-visible { outline:2px solid var(--action); outline-offset:5px; }
+@media(min-width:1101px) and (max-width:1300px) {
+  .home-screen .home-feature-poster { width:110px; height:190px; }
+  .home-screen .home-feature-body { gap:14px; }
+  .home-screen .home-overview .feature-buttons { gap:8px; }
+  .home-screen .home-overview .feature-buttons button { padding:10px; font-size:12px; }
+  .home-screen .home-shelves .collection-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(min-width:1101px) and (max-height:800px) {
+  .dashboard-sidebar .brand-emblem { height:175px; }
+  .dashboard-sidebar .brand-emblem img { max-height:175px; }
+  .dashboard-sidebar nav button,.sidebar-utility { min-height:36px; padding:7px 12px; }
+  .sidebar-bottom-actions { margin-top:12px; padding-top:10px; }
+}
+@media(max-width:600px) { .recommendation-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+/* Shelf headings are not application headers. */
+.home-screen .shelf-heading {
+  position:static; height:auto; min-height:26px; padding:0; margin:0 0 18px;
+  background:transparent; border:0; box-shadow:none;
+  justify-content:flex-start; gap:12px;
+}
+.home-screen .shelf-heading button { border-radius:6px; background:var(--panel-soft); padding:2px 9px; }
+.home-screen .dashboard-stats>* { position:relative; overflow:hidden; isolation:isolate; }
+.home-screen .dashboard-stats>*::after {
+  content:''; position:absolute; z-index:-1; right:0; inset-block:0; width:44%;
+  background-image:var(--stat-art); background-size:cover; background-position:center 25%;
+  opacity:.23; filter:grayscale(1); mix-blend-mode:luminosity;
+  mask-image:linear-gradient(90deg,transparent,#000 60%); pointer-events:none;
+}
+.home-screen .stat-blue .stat-icon { background:#006ef0; color:#fff; }
+.home-screen .stat-orange .stat-icon { background:#a64d13; color:#fff; }
+.home-screen .stat-purple .stat-icon { background:#6520cc; color:#fff; }
+.home-screen .stat-pink .stat-icon { background:#c9134a; color:#fff; }
+.recommendation-card>button { border:0; background:transparent; padding:4px 0; color:var(--action); font-size:12px; text-align:left; }
+.recommendation-skeleton { aspect-ratio:2/3; background:var(--panel-soft); border:1px solid var(--line); border-radius:7px; }
+.recommendation-empty { padding:20px; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+@media(min-width:1101px) {
+  .home-screen .home-overview .dashboard-feature,.home-screen .home-side-panel { min-height:260px; height:260px; }
+  .home-screen .home-feature-body { height:100%; box-sizing:border-box; }
+  .home-screen .home-feature-poster { height:224px; }
+  .home-screen .home-side-panel { display:flex; flex-direction:column; box-sizing:border-box; }
+  .home-screen .home-panel-list { flex:1; min-height:0; max-height:none; overflow-y:auto; }
+  .home-screen .home-panel-item { min-height:48px; padding:4px 0; box-sizing:border-box; }
+  .home-screen .home-panel-empty { flex:1; min-height:0; }
+  .home-screen .dashboard-stats { margin:18px 0 26px; }
+  .home-screen .dashboard-stats>* { height:94px; min-height:94px; box-sizing:border-box; }
+  .home-screen .home-shelves .collection-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+  .home-screen .home-shelves .collection-cover { aspect-ratio:auto; height:140px; }
+  .home-screen .recommendation-card img { height:180px; aspect-ratio:auto; }
+  .home-screen .collection-card-body { min-height:96px; }
+}

@@ -1,0 +1,32 @@
+/* Central accent layer. Semantic status, rating and profile colors stay distinct. */
+.app {
+  --action:color-mix(in srgb,var(--accent) 65%,#000);
+  --accent-ink:var(--action);
+  --accent-soft:color-mix(in srgb,var(--accent) 13%,var(--panel));
+  --accent-border:color-mix(in srgb,var(--accent) 55%,var(--line));
+  --accent-glow:color-mix(in srgb,var(--accent) 25%,transparent);
+}
+[data-theme='dark'] .app { --action:color-mix(in srgb,var(--accent) 60%,#fff); }
+.app.app :is(.primary,.orange-button,.sidebar-add,.series-search-row button,.series-dialog-footer .save,.theme-options button[aria-pressed=true],.layout-toggle button.active,.dashboard-filters button.active) {
+  background:var(--accent); border-color:var(--accent); color:var(--on-accent); box-shadow:0 3px 14px var(--accent-glow);
+}
+.app.app :is(.primary,.orange-button,.series-search-row button):hover:not(:disabled) { filter:brightness(.94); }
+.app.app .dashboard-sidebar nav button.active {
+  background:color-mix(in srgb,var(--accent) 25%,#061326); color:#fff;
+  border-color:var(--accent); box-shadow:inset 3px 0 var(--accent),0 0 12px var(--accent-glow);
+}
+.app.app .dashboard-sidebar nav button:hover:not(.active) { background:color-mix(in srgb,var(--accent) 15%,transparent); }
+.app.app :is(.library-icon,.home-panel-heading .ui-icon,.dashboard-welcome h1 .welcome-name,.collection-card-bottom button,.shelf-heading button,.recommendation-card>button) { color:var(--action); }
+.app.app :is(.library-icon,.library-search-row>label,.library-filterbar,.library-filterbar select,.library-filterbar .layout-toggle,.home-explore,.home-user-avatar,.dashboard-feature,.home-side-panel,.library-module .collection-card) { border-color:var(--accent-border); }
+.app.app .library-icon { background:var(--accent-soft); }
+.app.app :is(.series-search-card.selected,.series-source-tabs button[aria-pressed=true],.catalog-provider button[aria-pressed=true],.series-status-options button[aria-pressed=true]) { background:var(--accent-soft); border-color:var(--accent-border); color:var(--action); }
+.app.app .series-tabs button.active { color:var(--action); border-bottom-color:var(--accent); }
+.app.app :is(input,select,textarea,button,a):focus-visible { outline:2px solid var(--action); outline-offset:3px; }
+.app.app :is(input[type=checkbox],input[type=range],progress) { accent-color:var(--accent); }
+.app.app progress::-webkit-progress-value { background:var(--accent); }
+.app.app progress::-moz-progress-bar { background:var(--accent); }
+.app.app .series-favorite-toggle input:checked { background:var(--accent); }
+.app.app .home-panel-item>time { color:var(--action); background:var(--accent-soft); }
+.app.app .home-explore:hover { border-color:var(--accent); }
+.accent-help { display:block; color:var(--quiet); font-size:12px; line-height:1.5; }
+.app .swatches button[aria-pressed=true] { outline:2px solid var(--action); outline-offset:3px; }

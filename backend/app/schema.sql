@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS profiles(id INTEGER PRIMARY KEY, name TEXT NOT NULL, color TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS series(id INTEGER PRIMARY KEY, title TEXT NOT NULL, genre TEXT NOT NULL, year INTEGER NOT NULL, status TEXT NOT NULL, description TEXT NOT NULL, color TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS reviews(series_id INTEGER REFERENCES series(id) ON DELETE CASCADE, profile_id INTEGER REFERENCES profiles(id), score REAL CHECK(score>=0.5 AND score<=5 AND score*2=CAST(score*2 AS INTEGER)), comment TEXT NOT NULL, PRIMARY KEY(series_id,profile_id));
+CREATE TABLE IF NOT EXISTS settings(id INTEGER PRIMARY KEY CHECK(id=1), value TEXT NOT NULL);
+INSERT OR IGNORE INTO settings VALUES(1,'{"name":"El club del episodio","accent":"#FF6600","compact":false}');
+CREATE TABLE IF NOT EXISTS catalog_cache(query TEXT PRIMARY KEY, results TEXT NOT NULL, updated REAL NOT NULL);
+CREATE TABLE IF NOT EXISTS episodes(id INTEGER PRIMARY KEY, series_id INTEGER NOT NULL REFERENCES series(id) ON DELETE CASCADE, catalog_id INTEGER UNIQUE, season INTEGER NOT NULL, number INTEGER NOT NULL, title TEXT NOT NULL, description TEXT NOT NULL DEFAULT '', UNIQUE(series_id,season,number));
+CREATE TABLE IF NOT EXISTS episode_reviews(episode_id INTEGER PRIMARY KEY REFERENCES episodes(id) ON DELETE CASCADE, score REAL NOT NULL CHECK(score>=0.5 AND score<=5 AND score*2=CAST(score*2 AS INTEGER)), comment TEXT NOT NULL DEFAULT '');
