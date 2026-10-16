@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: puntuador-inador
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r backend/requirements.txt && npm --prefix frontend ci && npm --prefix frontend run build
+    startCommand: cd backend && python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1 --proxy-headers
+    healthCheckPath: /api/health
+    disk:
+      name: puntuador-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: CLUB_DB
+        value: /var/data/club.sqlite
+      - key: PYTHON_VERSION
+        value: 3.13.7
+      - key: NODE_VERSION
+        value: 24.12.0
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

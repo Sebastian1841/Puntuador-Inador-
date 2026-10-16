@@ -1,4 +1,4 @@
 import { createApp } from 'vue';
 import './assets/styles';
-import App from './App.vue';
+import App from './AuthRoot.vue';
 createApp(App).mount('#app');

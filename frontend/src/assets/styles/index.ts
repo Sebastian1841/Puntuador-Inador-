@@ -21,3 +21,5 @@ import './modules.css';
 import './home-reference.css';
 import './collection-library.css';
 import './accent.css';
+
+import './account.css';

@@ -1,0 +1,6 @@
+{
+  "vetur.validation.script": false,
+  "vetur.validation.template": false,
+  "vetur.validation.templateProps": false,
+  "typescript.tsdk": "frontend/node_modules/typescript/lib"
+}

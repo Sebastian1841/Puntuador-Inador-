@@ -15,7 +15,7 @@ async function health(): Promise<'ready' | 'stale' | 'other' | 'offline'> {
     if (!response.ok) return 'other'
     const data = await response.json() as { backend?: string; database?: string; api_version?: number }
     if (data.backend !== 'python-fastapi' || data.database !== 'sqlite') return 'other'
-    return data.api_version === 4 ? 'ready' : 'stale'
+    return data.api_version === 5 ? 'ready' : 'stale'
   } catch { return 'offline' }
 }
 

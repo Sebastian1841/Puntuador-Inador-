@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
   <img src="frontend/public/puntuador-mascots-v3.png" alt="Logo de Puntuador-inador" width="260" />
 
 # Puntuador-inador
@@ -42,7 +42,7 @@ Las valoraciones van de **0.5 a 5 estrellas**, en incrementos de media estrella.
 - El navegador recuerda el perfil seleccionado al volver a abrir la página.
 - Puedes eliminar perfiles con confirmación; siempre debe quedar al menos uno.
 
-Los perfiles son locales y **no tienen contraseña**. La apariencia general es compartida; el color y avatar de cada perfil son independientes.
+En modo local, los perfiles no requieren contraseña. En producción, cada cuenta tiene acceso protegido y administra únicamente sus propios perfiles. La apariencia se guarda por cuenta; el color y avatar de cada perfil son independientes.
 
 ### Una colección a tu medida
 
@@ -183,7 +183,11 @@ Para hacer una copia de seguridad completa, **detén la aplicación y copia el a
 
 Configuración también permite exportar los datos disponibles del club en JSON. Esa exportación no sustituye una copia completa de SQLite.
 
-La biblioteca y las puntuaciones se almacenan localmente. La aplicación está pensada para uso local; no incluye autenticación de usuarios ni una configuración de despliegue público.
+La biblioteca y las puntuaciones se almacenan localmente. La aplicación conserva el modo local y dispone de acceso por invitación para producción. Consulta [la guía de publicación](DEPLOYMENT.md) para configurar cuentas, almacenamiento persistente y respaldos.
+
+## 🌐 Publicar para tus amigos
+
+El proyecto incluye acceso por invitación, sesiones protegidas, aislamiento de perfiles por cuenta y configuración para Render sin instalar Docker. Sigue [DEPLOYMENT.md](DEPLOYMENT.md) para desplegar y trasladar tus datos. La publicación requiere una cuenta del proveedor y un plan con disco persistente.
 
 ## 🛠️ Desarrollo y comprobaciones
 

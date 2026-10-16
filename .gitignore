@@ -1,0 +1,18 @@
+# Private local data and dependencies
+**/node_modules/
+**/.venv/
+**/__pycache__/
+*.pyc
+*.sqlite
+*.sqlite-*
+*.db
+.env
+.env.*
+!.env.example
+frontend/dist/
+.preview-edge/
+*.log
+*.tsbuildinfo
+backups/
+
+*.sqlite.*
